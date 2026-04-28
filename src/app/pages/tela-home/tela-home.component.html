@@ -1,0 +1,48 @@
+<div class="TelaInicial">
+  <header class="Header">
+    <div>
+      <img src="assets/img/image.webp" class="centro-imagem" alt="DevBank Logo" />
+    </div>
+    <div class="box-dados-conta">
+      <h2 class="dados-conta">
+        Nome: {{ contaService.name() }}<br />
+        Agência: {{ contaService.agency() }}<br />
+        Conta: {{ contaService.account() }}
+      </h2>
+    </div>
+  </header>
+
+  <div class="janela-acoes-home">
+    <div class="container-botoes-saldo">
+
+      <div class="box-saldo">
+        <div class="oq-fazer">
+          <h2>O que deseja fazer?</h2>
+        </div>
+        <div class="saldo-box">
+          <h2 class="saldo">Saldo atual: R$ {{ contaService.currentBalance() }}</h2>
+        </div>
+      </div>
+
+      <div class="box-acoes">
+        <button class="botoes-banco" (click)="sacar()">
+          Sacar
+          <img src="assets/img/sacar.png" alt="Sacar" width="160" />
+        </button>
+        <button class="botoes-banco" (click)="depositar()">
+          Depositar
+          <img src="assets/img/depositar.png" alt="Depositar" width="160" />
+        </button>
+        <button class="botoes-banco" (click)="transacoes()">
+          Transações
+          <img src="assets/img/transacao.png" alt="Transações" width="160" />
+        </button>
+      </div>
+
+      <div class="bottom">
+        <button class="botao-voltar" (click)="voltar()">Voltar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

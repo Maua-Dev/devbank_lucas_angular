@@ -1,0 +1,60 @@
+.quadro-total {
+  height: auto;
+  width: 95%;
+  margin: 1%;
+  background-color: rgb(255, 255, 255);
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  margin-bottom: 2%;
+}
+
+.tipo {
+  height: 24%;
+  width: 96%;
+  background-color: rgb(255, 0, 0);
+  margin-top: 1%;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  padding: 1%;
+  font-size: 2vw;
+}
+
+.tipo-deposito {
+  height: 24%;
+  width: 96%;
+  background-color: rgb(3, 212, 3);
+  margin-top: 1%;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: "Lexend", sans-serif;
+  padding: 1%;
+  font-size: 2vw;
+}
+
+.textos {
+  display: flex;
+  width: 100%;
+  height: 66%;
+  flex-direction: row;
+  margin: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.texto {
+  height: 90%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Lexend", sans-serif;
+  font-size: 1.6vw;
+}

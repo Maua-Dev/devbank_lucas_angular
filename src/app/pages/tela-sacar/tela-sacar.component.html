@@ -1,0 +1,58 @@
+<div class="TelaInicial">
+  <header class="Header">
+    <div>
+      <img src="assets/img/image.webp" class="centro-imagem" alt="DevBank Logo" />
+    </div>
+    <div class="box-dados-conta">
+      <h2 class="dados-conta">
+        Nome: {{ contaService.name() }}<br />
+        Agência: {{ contaService.agency() }}<br />
+        Conta: {{ contaService.account() }}
+      </h2>
+    </div>
+  </header>
+
+  <div class="janela-acoes">
+    <div class="container-botoes-saldo">
+
+      <div class="box-saldo">
+        <div class="oq-fazer">
+          <h2 class="saldo">Saldo atual: R$ {{ contaService.currentBalance() }}</h2>
+        </div>
+        <div class="saldo-box">
+          <h2 class="saldo">Total: R$ {{ total }}</h2>
+        </div>
+      </div>
+
+      <div class="Texto-Cedulas">
+        <div class="texto-guia">
+          Selecione as cédulas que você deseja sacar.
+          <div *ngIf="erroMensagem" class="alerta-erro">
+            Erro!<br />{{ erroMensagem }}
+          </div>
+        </div>
+
+        <div class="box-cedulas">
+          <div class="box-cedulas-cima">
+            <app-card [nota]="2"></app-card>
+            <app-card [nota]="5"></app-card>
+            <app-card [nota]="10"></app-card>
+            <app-card [nota]="20"></app-card>
+          </div>
+          <br />
+          <div class="box-cedulas-baixo">
+            <app-card [nota]="50"></app-card>
+            <app-card [nota]="100"></app-card>
+            <app-card [nota]="200"></app-card>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottom">
+        <button class="botao-voltar" (click)="voltar()">Voltar</button>
+        <button class="botao-voltar" (click)="sacar()">Sacar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

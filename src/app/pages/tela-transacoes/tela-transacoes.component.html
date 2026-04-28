@@ -1,0 +1,39 @@
+<div class="bottom">
+  <div class="TelaInicial-transacoes">
+    <header class="Header">
+      <div>
+        <img src="assets/img/image.webp" class="centro-imagem" alt="DevBank Logo" />
+      </div>
+      <div class="box-dados-conta">
+        <h2 class="dados-conta">
+          Nome: {{ contaService.name() }}<br />
+          Agência: {{ contaService.agency() }}<br />
+          Conta: {{ contaService.account() }}
+        </h2>
+      </div>
+    </header>
+
+    <div class="janela-acoes-transacoes">
+      <div class="container-botoes-saldo-transacoes">
+
+        <div class="voltar">
+          <button class="botao-voltar-transacoes" (click)="voltar()">VOLTAR</button>
+          <div *ngIf="historico.length === 0" class="alerta-vazio">
+            Nenhuma transação feita.
+          </div>
+        </div>
+
+        <div class="registros">
+          <app-registro
+            *ngFor="let transacao of historico"
+            [tipo]="transacao.tipo"
+            [valor]="transacao.valor"
+            [data]="formatarData(transacao.hora)"
+            [saldo]="transacao.saldo"
+          ></app-registro>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
