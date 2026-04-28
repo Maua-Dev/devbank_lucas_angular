@@ -16,7 +16,7 @@ export class TelaLoginComponent implements OnInit {
   isAPIerro = false;
 
   // URL válida para acesso (mesma lógica do React original)
-  private readonly chaveValida = 'https://r2tcz6zsokynb72jb6o4ffd5nm0ryfyz.lambda-url.us-west-2.on.aws/';
+  private readonly chaveValida = 'https://y5klzz3x33bqv3kytn4swkcwji0vlfhw.lambda-url.us-east-1.on.aws/';
 
   constructor(
     private contaService: ContaService,
